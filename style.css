@@ -19,7 +19,6 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* height: 100vh; */
     width: 80vw;
     gap: 100px;
 }
@@ -371,275 +370,82 @@ font-size: 3rem;
     font-size: 1.3rem;
 }
 
-@media (max-width: 1200px) {
-    body {
-        font-size: 14px; /* Adjusted for better readability */
+@media only screen and (max-width: 1024px) {
+    .main_container {
+        width: 85vw;
+        gap: 50px;
     }
 
     .navbar {
-        display: flex; /* Use flexbox for the navbar */
-        justify-content: center; /* Center items horizontally */
-        flex-wrap: wrap; /* Allow items to wrap if needed */
-        padding: 15px; 
-    }
-
-    .navbar a, .navbar i {
-        font-size: 1.6rem; 
-        margin: 0 10px; /* Horizontal spacing for icons */
-        text-align: center; /* Center text in navbar */
+        padding: 10px;
+        gap: 20px;
     }
 
     .container__header h1 {
-        font-size: 3.5rem; 
-        text-align: center; 
+        font-size: 4rem;
     }
 
-    .container__header h3, .container__header p {
-        font-size: 1.5rem; 
-        width: 90%; 
-        text-align: center; 
-        margin: 10px auto; /* Center align and margin */
-    }
-
-    .container__icons {
-        display: flex; 
-        flex-direction: row; /* Horizontal layout */
-        flex-wrap: wrap; /* Allow wrapping */
-        justify-content: center; /* Center items */
-        gap: 20px; 
-        width: 100%; 
-    }
-
-    .container__icons i {
-        font-size: 5rem; 
-    }
-
-    .experience p {
-        width: 90%; 
-        font-size: 1rem; 
-        text-align: center; 
-        margin: 10px auto; /* Center align and margin */
-    }
-
-    .education h3 {
-        font-size: 1.5rem; 
-        text-align: center; 
-    }
-
-    .education h4, .education h5 {
-        font-size: 1rem; 
-    }
-
-    /* Project section adjustments */
-    .projects {
-        display: flex;
-        flex-direction: column; /* Stack projects vertically */
-        align-items: center; /* Center projects */
-        width: 100%; 
-        margin: 0 auto; /* Center the section */
-        padding: 20px 0; /* Add some padding for spacing */
-    }
-
-    .project-item {
-        width: 90%; /* Ensure project items fit within the screen */
-        max-width: 600px; /* Set a max-width for larger screens */
-        margin: 10px auto; /* Center and add spacing */
-        text-align: center; /* Center the text */
-        padding: 15px; /* Add padding for content */
-        border: 1px solid #ccc; /* Optional: Add border for visibility */
-        border-radius: 8px; /* Optional: Round corners */
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: Add shadow for depth */
-    }
-
-    .certifications {
-        flex-direction: column; 
-        align-items: center; 
-        width: 100%; 
-        gap: 20px; /* Add spacing */
-    }
-
-    .certification-item {
-        width: 90%; 
-        text-align: center; 
-    }
-
-    .links {
-        flex-direction: column; 
-        align-items: center; /* Center links */
-        gap: 10px; 
-    }
-
-    .footer {
-        flex-direction: column; 
-        align-items: center; /* Center footer */
-        gap: 10px; 
-    }
-
-    .footer p {
-        font-size: 1rem; 
-        text-align: center; 
+    .container__header p {
+        font-size: 1.8rem;
     }
 }
 
-@media (max-width: 768px) {
-    body {
-        font-size: 12px; 
+@media only screen and (max-width: 768px) {
+    .main_container {
+        width: 90vw;
+        gap: 30px;
     }
 
     .navbar {
-        padding: 10px; 
-    }
-
-    .navbar a, .navbar i {
-        font-size: 1.4rem; 
-        margin: 0 8px; /* Horizontal spacing */
-        text-align: center; /* Center text in navbar */
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
     }
 
     .container__header h1 {
-        font-size: 3rem; 
+        font-size: 3rem;
     }
 
-    .container__header h3, .container__header p {
-        font-size: 1.4rem; 
-        width: 90%; 
-        text-align: center; 
-        margin: 10px auto; /* Center align and margin */
-    }
-
-    .container__icons {
-        width: 90%; 
-        justify-content: center; /* Center items */
+    .container__header p {
+        font-size: 1.5rem;
+        width: 85%;
     }
 
     .container__icons i {
-        font-size: 4.5rem; 
-    }
-
-    .experience p {
-        font-size: 0.9rem; 
-    }
-
-    .projects {
-        width: 90%; /* Ensure project section fits within screen */
-    }
-
-    .project-item {
-        width: 100%; /* Adjust project item width */
-        margin: 10px auto; /* Center and add spacing */
-        text-align: center; /* Center the text */
-    }
-
-    .education h3 {
-        font-size: 1.4rem; 
-        text-align: center; 
-    }
-
-    .education h4, .education h5 {
-        font-size: 0.9rem; 
-    }
-
-    .certifications {
-        align-items: center; 
-    }
-
-    .certification-item {
-        width: 90%; 
-    }
-
-    .links {
-        flex-direction: column; 
-        align-items: center; /* Center links */
-        gap: 10px; 
-    }
-
-    .footer {
-        gap: 5px; 
-    }
-
-    .footer p {
-        font-size: 0.9rem; 
+        font-size: 3rem;
     }
 }
 
-@media (max-width: 480px) {
-    body {
-        font-size: 10px; 
+@media only screen and (max-width: 480px) {
+    .main_container {
+        width: 85vw;
+        gap: 20px;
+        flex-wrap: wrap;
     }
 
     .navbar {
-        padding: 5px; 
+        padding: 8px;
+        gap: 3px;
+        flex-wrap: wrap;
+        flex-direction: row;
+        padding: 3px;
+        gap: 5px;
     }
-
-    .navbar a, .navbar i {
-        font-size: 1.2rem; 
-        text-align: center; /* Center text in navbar */
+    .container__header{
+        font-size: 1rem;
+        width: 80%;
     }
 
     .container__header h1 {
-        font-size: 2.5rem; 
+        font-size: 2.5rem;
     }
 
-    .container__header h3, .container__header p {
-        font-size: 1.2rem; 
-        width: 95%; 
-        text-align: center; 
-        margin: 10px auto; /* Center align and margin */
-    }
-
-    .container__icons {
-        flex-direction: column; 
-        width: 100%; 
-        gap: 15px; 
-        align-items: center; /* Center items */
+    .container__header p {
+        font-size: 1.2rem;
+        width: 90%;
     }
 
     .container__icons i {
-        font-size: 3.5rem; 
-    }
-
-    .experience p {
-        font-size: 0.8rem; 
-    }
-
-    .projects {
-        width: 100%; /* Ensure project section fits within screen */
-    }
-
-    .project-item {
-        width: 90%; /* Adjust project item width */
-        margin: 10px auto; /* Center and add spacing */
-        text-align: center; /* Center the text */
-    }
-
-    .education h3 {
-        font-size: 1.5rem; 
-    }
-
-    .education h4, .education h5 {
-        font-size: 0.8rem; 
-    }
-
-    .certifications {
-        align-items: center; 
-    }
-
-    .certification-item {
-        width: 90%; 
-    }
-
-    .links {
-        flex-direction: column; 
-        align-items: center; /* Center links */
-        gap: 5px; 
-    }
-
-    .footer {
-        gap: 3px; 
-    }
-
-    .footer p {
-        font-size: 0.8rem; 
-        text-align: center; 
+        font-size: 2.5rem;
     }
 }
