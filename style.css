@@ -13,6 +13,7 @@ body{
     justify-content: center;
      background:rgba(0,0,0,255);
      color: #cccccc;
+     overflow-x: hidden;
 }
 .main_container{
     display: flex;
@@ -38,6 +39,7 @@ body{
     gap: 50px;
     padding: 10px;
     height: 70px;
+    flex-wrap: wrap;
 }
 .navbar i{
     font-size: 2rem;
@@ -370,7 +372,7 @@ font-size: 3rem;
     font-size: 1.3rem;
 }
 
-@media only screen and (max-width: 1024px) {
+/* @media only screen and (max-width: 1024px) {
     .main_container {
         width: 85vw;
         gap: 50px;
@@ -447,5 +449,144 @@ font-size: 3rem;
 
     .container__icons i {
         font-size: 2.5rem;
+    }
+} */
+@media only screen and (max-width: 1024px) {
+    .main_container {
+        width: 100vw; /* Ensure full viewport width */
+        padding: 10px; /* Ensure padding */
+        gap: 15px; /* Reduce gap */
+    }
+
+    .container__header {
+        width: 90%; /* Use more of the available width */
+    }
+
+    .container__header h1 {
+        font-size: 2.2rem; /* Slightly smaller header */
+    }
+
+    .container__header p {
+        font-size: 1.15rem; /* Slightly smaller paragraph */
+    }
+}
+
+/* Small Mobile and Large Phones (768px and below) */
+@media only screen and (max-width: 768px) {
+    .main_container {
+        padding: 10px; /* Ensure padding */
+        gap: 15px; /* Reduce gap */
+        flex-direction: column; /* Stack vertically */
+    }
+
+    .container__header {
+        width: 90%; /* Adjust width */
+    }
+
+    .container__header h1 {
+        font-size: 2rem; /* Smaller header for better fit */
+    }
+
+    .container__header p {
+        font-size: 1rem; /* Smaller paragraph */
+        text-align: center; /* Center text */
+        width: 100%; /* Full width */
+    }
+
+    .container__icons {
+        display: flex; /* Use flex for icons */
+        flex-wrap: wrap; /* Allow wrapping */
+        justify-content: center; /* Center icons */
+        gap: 10px; /* Space between icons */
+        width: 100%; /* Full width */
+    }
+
+    .container__icons i {
+        font-size: 1.5rem; /* Adjust icon size */
+        flex: 1; /* Allow icons to grow equally */
+        text-align: center; /* Center icon text */
+    }
+}
+
+/* Ultra-Small Mobile and Compact Devices (480px and below) */
+@media only screen and (max-width: 480px) {
+    .main_container {
+        padding: 5px; /* Add padding */
+        gap: 10px; 
+        width: 100vw; /* Use full width */
+    }
+
+    .navbar {
+        flex-direction: column; /* Stack navbar items */
+        align-items: center; /* Center navbar items */
+        width: 100%; /* Full width */
+    }
+
+    .container__header {
+        width: 100%; 
+        text-align: center; 
+    }
+
+    .container__header h1 {
+        font-size: 1.8rem; /* Smaller header */
+    }
+
+    .container__header p {
+        font-size: 0.9rem; /* Smaller paragraph */
+        width: 100%; /* Full width */
+        margin: 0; /* Remove margin */
+    }
+
+    .container__icons {
+        display: flex; /* Use flex for icons */
+        flex-wrap: wrap; /* Allow wrapping */
+        justify-content: center; /* Center icons */
+        gap: 10px; /* Space between icons */
+        width: 100%; /* Full width */
+    }
+
+    .container__icons i {
+        font-size: 1.3rem; /* Adjust icon size */
+        flex: 1; /* Allow icons to grow equally */
+        text-align: center; /* Center icon text */
+    }
+}
+
+/* Extra Small Mobile Devices (360px and below) */
+@media only screen and (max-width: 360px) {
+    .main_container {
+        padding: 5px; 
+        gap: 5px; 
+        width: 100vw; /* Use full width */
+    }
+
+    .navbar {
+        padding: 4px; 
+        gap: 5px; 
+        width: 100%; /* Full width */
+    }
+
+    .container__header h1 {
+        font-size: 1.5rem; /* Smaller header for very small devices */
+    }
+
+    .container__header p {
+        font-size: 0.8rem; /* Smaller paragraph */
+        width: 100%; /* Full width */
+        margin: 0; /* Remove margin */
+    }
+
+    .container__icons {
+        display: flex; /* Use flex for icons */
+        flex-wrap: wrap; /* Allow wrapping */
+        justify-content: center; /* Center icons */
+        gap: 5px; /* Space between icons */
+        width: 100%; /* Full width */
+    }
+
+    .container__icons i {
+        font-size: 1.3rem; /* Adjust icon size for very small devices */
+        flex: 1; /* Allow icons to grow equally */
+        text-align: center; /* Center icon text */
     }
 }
